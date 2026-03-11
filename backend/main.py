@@ -80,6 +80,11 @@ async def global_exception_handler(_, exc: Exception):
     )
 
 
+@app.get("/")
+def root():
+    return {"message": "Electricity Market API is running", "docs": "/docs"}
+
+
 @app.get("/ping")
 def ping():
     return {"status": "ok"}
@@ -115,3 +120,4 @@ def delete_record(record_id: int):
         df = df[df["id"] != record_id]
         save_data(df)
     return {"status": "ok", "deleted_id": record_id}
+
