@@ -87,3 +87,7 @@ streamlit run frontend/app.py
 ```
 
 Если переменная не задана, используется `http://127.0.0.1:8000`.
+## Deployment
+
+- FastAPI: Railway backend
+- Streamlit: Railway UI
